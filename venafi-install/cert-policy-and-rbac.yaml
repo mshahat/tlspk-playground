@@ -28,6 +28,7 @@ spec:
       - "signing"
       - "digital signature"
       - "server auth"
+      - "key encipherment"
 #  plugins:
 #    venafi:
 #      values:
@@ -39,55 +40,6 @@ spec:
       kind: "Venafi*Issuer"
       group: "jetstack.io"
 ---
-apiVersion: policy.cert-manager.io/v1alpha1
-kind: CertificateRequestPolicy
-metadata:
-  name: cert-policy-for-venafi-firefly-certs
-spec:
-  allowed:
-    commonName:
-      value: "*"
-    dnsNames:
-      values: ["*"]
-    uris:
-      values:
-      - "spiffe://cluster.local/ns/*/sa/*"      
-    isCA: false
-    subject:
-      organizations:
-        values: ["*"]
-      countries:
-        values: ["*"]
-      organizationalUnits:
-        values: ["*"]
-      localities:
-        values: ["*"]
-      provinces:
-        values: ["*"]
-      streetAddresses:
-        values: ["*"]
-      postalCodes:
-        values: ["*"]
-    usages:
-      - "signing"
-      - "digital signature"
-      - "client auth"
-      - "server auth"
-#  plugins:
-#    venafi:
-#      values:
-#        venafiConnectionName: "venafi-*-connection"
-#        zone: "application-name\\issuing-template-name"      
-  selector:
-    issuerRef:
-      name: "*"
-      kind: "*"
-      group: "firefly.venafi.com"
-    namespace:
-       matchNames: 
-       - "sandbox"
-       - "*istio-system"
----
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
@@ -97,8 +49,7 @@ rules:
     resources: ["certificaterequestpolicies"]
     verbs: ["use"]
     # Name of the CertificateRequestPolicies to be used.
-    resourceNames: ["cert-policy-for-venafi-certs","cert-policy-for-venafi-firefly-certs"]
-
+    resourceNames: ["cert-policy-for-venafi-certs"]
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -114,6 +65,4 @@ subjects:
 - kind: ServiceAccount
   name: cert-manager
   namespace: venafi
-- kind: ServiceAccount
-  name: cert-manager-istio-csr
-  namespace: venafi
+

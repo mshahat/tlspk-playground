@@ -2,6 +2,9 @@
 
 Now every thing ready to issue certificates in kuberntes using the cluster issuer created earlier
 
+## Sample Certificate
+
+At this stage you will issue a certificate using the builtin ca that comes with Venafi Control Plane. This is configured by the issuing pokicy used
 
 Create `sample-cert1.yaml` under folder `venafi-install`
 
@@ -67,6 +70,22 @@ venafi-image-pull-secret                           kubernetes.io/dockerconfigjso
 ```
 
 
+## Ingress
+
+
+You can stop here 
+
+Install an ingress controller 
+
+```bash
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
+```
+
+deploy a test application 
+
+```bash
+helm upgrade --install --wait frontend --namespace venafi --values helm-podinfo-values.yaml podinfo/podinfo
+```
 
 
 [Main Menu](../README.md) | Next [Onboard a Kubernetes Cluster for Discovery](README5.md)
