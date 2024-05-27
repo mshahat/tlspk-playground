@@ -27,15 +27,16 @@ spec:
 --- 
 ```
 
+Create the sample certificate
+
 ```bash
 kubectl -n venafi apply -f venafi-install/sample-cert1.yaml 
 certificate.cert-manager.io/sample-cert1.venafi.com created
 ```
 
+Now check the certificate request, the certificate and the created tls secret 
 
 ```bash
-
-
 $ kubectl -n venafi get certificaterequest
 certificaterequestpolicies.policy.cert-manager.io  certificaterequests.cert-manager.io                
 
@@ -64,8 +65,6 @@ trust-manager-tls                                  kubernetes.io/tls            
 venafi-cloud-credentials                           Opaque                           1      46m
 venafi-image-pull-secret                           kubernetes.io/dockerconfigjson   1      162m
 ```
-
-
 
 
 
