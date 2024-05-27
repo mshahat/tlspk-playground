@@ -1,5 +1,5 @@
 ---
-# create role that allows creating sa tokens for 'sandbox'
+# create role that allows creating sa tokens for 'vneafi'
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
