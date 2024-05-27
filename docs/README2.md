@@ -43,7 +43,7 @@ kind --version
 Use Kind to create a kubernetes cluster 
 
 ```
-kind create cluster --name tech-training
+kind create cluster --config kind-with-ingress.yaml --name tech-training
 ```
 
 ```bash

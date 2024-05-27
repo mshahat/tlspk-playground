@@ -84,6 +84,9 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main
 deploy a test application 
 
 ```bash
+helm repo add podinfo https://stefanprodan.github.io/podinfo
+helm repo update
+
 helm upgrade --install --wait frontend --namespace venafi --values helm-podinfo-values.yaml podinfo/podinfo
 ```
 
