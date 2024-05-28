@@ -21,7 +21,7 @@ This guide is providing good guidance to run the same set up on your own worksta
 
 ## Steps
 
-- [Kick off GitHub Codecode](docs/README0.md)
+- [Kick off GitHub Codecodes instance](docs/README0.md)
 - [Configure Venafi Control Plane](docs/README1.md)
 - [Deploy Components to a Kubernetes Cluster](docs/README2.md)
 - [Create a Cert Manager Issuer](docs/README3.md)
