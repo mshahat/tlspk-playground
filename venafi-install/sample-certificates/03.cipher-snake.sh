@@ -1,14 +1,14 @@
 	openssl req -x509 \
         -nodes -days 91 \
         -newkey rsa:1024 \
-        -keyout artifacts/samples/cipher-snake.svc.cluster.local.key \
-        -out artifacts/samples/cipher-snake.svc.cluster.local.crt \
+        -keyout cipher-snake.svc.cluster.local.key \
+        -out cipher-snake.svc.cluster.local.crt \
         -subj "/C=US/ST=Utah/L=Salt Lake City/O=MIM Lab/OU=App Team 2/CN=cipher-snake.svc.cluster.local"
 
     kubectl -n venafi create secret tls \
         cipher-snake.svc.cluster.local \
-        --key="artifacts/samples/cipher-snake.svc.cluster.local.key" \
-        --cert="artifacts/samples/cipher-snake.svc.cluster.local.crt" 
+        --key="cipher-snake.svc.cluster.local.key" \
+        --cert="cipher-snake.svc.cluster.local.crt" 
 
 
 kubectl apply -f - <<EOF
