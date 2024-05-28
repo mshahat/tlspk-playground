@@ -123,20 +123,20 @@ ingress:
     cert-manager.io/issuer-group: jetstack.io # Optional, defaults to cert-manager.io
     cert-manager.io/issuer-kind: VenafiClusterIssuer # Optional, defaults to Issuer, could be ClusterIssuer or an External Issuer
     #cert-manager.io/duration: 1h # Optional, defaults to 90 days
-    cert-manager.io/common-name: "podinfo.venafi.com" # Optional, no default.
+    cert-manager.io/common-name: 127-0-0-1.nip.io # Optional, no default.
     #cert-manager.io/alt-names: "127-0-0-1.nip.io" # Optional, no default
     #cert-manager.io/usages: "digital signature, server auth"
     #cert-manager.io/ip-sans: "10.20.30.40,192.168.192.168" # Optional, no default
     #cert-manager.io/uri-sans: "spiffe://trustdomain/workload" # Optional, no default
   hosts:
-    - host: podinfo.venafi.com
+    - host: 127-0-0-1.nip.io
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls:
     - hosts: 
-        - podinfo.venafi.com
-      secretName: podinfo.venafi.com
+        - 127-0-0-1.nip.io
+      secretName: 127-0-0-1.nip.io
   #    hosts:
   #      - chart-example.local
 
