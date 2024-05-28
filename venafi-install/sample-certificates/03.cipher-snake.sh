@@ -5,7 +5,7 @@
         -out artifacts/samples/cipher-snake.svc.cluster.local.crt \
         -subj "/C=US/ST=Utah/L=Salt Lake City/O=MIM Lab/OU=App Team 2/CN=cipher-snake.svc.cluster.local"
 
-    kubectl -n sandbox create secret tls \
+    kubectl -n venafi create secret tls \
         cipher-snake.svc.cluster.local \
         --key="artifacts/samples/cipher-snake.svc.cluster.local.key" \
         --cert="artifacts/samples/cipher-snake.svc.cluster.local.crt" 
@@ -16,7 +16,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: cipher-snake-nginx
-  namespace: sandbox
+  namespace: venafi
 spec:
   type: NodePort
   ports:
@@ -30,7 +30,7 @@ metadata:
   labels:
     app: cipher-snake-nginx
   name: cipher-snake-nginx
-  namespace: sandbox
+  namespace: venafi
 spec:
   replicas: 2
   selector:

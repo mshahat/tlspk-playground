@@ -3,7 +3,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: phantom-ca-issued-nginx
-  namespace: sandbox
+  namespace: venafi
 spec:
   type: NodePort
   ports:
@@ -17,7 +17,7 @@ metadata:
   labels:
     app: phantom-ca-issued-nginx
   name: phantom-ca-issued-nginx
-  namespace: sandbox
+  namespace: venafi
 spec:
   replicas: 2
   selector:

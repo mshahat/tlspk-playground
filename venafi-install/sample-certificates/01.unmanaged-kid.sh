@@ -5,7 +5,7 @@
         -out artifacts/samples/unmanaged-kid.svc.cluster.local.crt \
         -subj "/C=US/ST=Utah/L=Salt Lake City/O=MIM Lab/OU=App Team 1/CN=unmanaged-kid.svc.cluster.local"
 
-  kubectl -n sandbox create secret tls \
+  kubectl -n venafi create secret tls \
         unmanaged-kid.svc.cluster.local \
         --key="artifacts/samples/unmanaged-kid.svc.cluster.local.key" \
         --cert="artifacts/samples/unmanaged-kid.svc.cluster.local.crt" 
@@ -15,7 +15,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: unmanaged-kid-nginx
-  namespace: sandbox
+  namespace: venafi
 spec:
   type: NodePort
   ports:
@@ -29,7 +29,7 @@ metadata:
   labels:
     app: unmanaged-kid-nginx
   name: unmanaged-kid-nginx
-  namespace: sandbox
+  namespace: venafi
 spec:
   replicas: 2
   selector:
