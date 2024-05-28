@@ -72,8 +72,7 @@ venafi-image-pull-secret                           kubernetes.io/dockerconfigjso
 
 ## Ingress
 
-
-You can stop here 
+At this step you explore an example of an ingress and how cert manager automate the certificate issuance
 
 Install an ingress controller 
 
@@ -81,7 +80,9 @@ Install an ingress controller
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
 ```
 
-deploy a test application 
+explore file `venafi-install/helm-podinfo-values.yaml` line 114 to 140, see how an ingress is annotated 
+
+Deploy a test application 
 
 ```bash
 helm repo add podinfo https://stefanprodan.github.io/podinfo
@@ -90,7 +91,16 @@ helm repo update
 helm upgrade --install --wait frontend --namespace venafi --values venafi-install/helm-podinfo-values.yaml podinfo/podinfo 
 ```
 
-if for any reason you would like undeploy the app, the following
+Explore the related objects created
+
+```bash
+kubectl -n venafi get ingresses
+kubectl -n venafi get certificaterequests
+kubectl -n venafi get certificates
+kubectl -n venafi get secrets
+```
+
+If for any reason you would like undeploy the app, the following
 
 ```bash
 helm -n venafi uninstall frontend
