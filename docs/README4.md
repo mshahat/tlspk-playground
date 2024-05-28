@@ -87,7 +87,7 @@ deploy a test application
 helm repo add podinfo https://stefanprodan.github.io/podinfo
 helm repo update
 
-helm upgrade --install --wait frontend --namespace venafi --values helm-podinfo-values.yaml podinfo/podinfo
+helm upgrade --install --wait frontend --namespace venafi --values venafi-install/helm-podinfo-values.yaml podinfo/podinfo 
 ```
 
 
