@@ -90,5 +90,11 @@ helm repo update
 helm upgrade --install --wait frontend --namespace venafi --values venafi-install/helm-podinfo-values.yaml podinfo/podinfo 
 ```
 
+if for any reason you would like undeploy the app, the following
+
+```bash
+helm -n venafi uninstall frontend
+```
+
 
 [Main Menu](../README.md) | Next [Onboard a Kubernetes Cluster for Discovery](README5.md)

@@ -89,10 +89,6 @@ Components needed to issue certificates are to be deployed. There are more compo
 Use `venctl` to generate the manifest required to deploy
 
 ```bash
-mkdir venafi-install
-```
-
-```bash
 venctl components kubernetes manifest generate \
         --namespace venafi \
         --approver-policy-enterprise \
