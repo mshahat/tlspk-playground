@@ -2,11 +2,11 @@
 
 This Playground provides guidance for two scenarios 
 
-- Explore and demonestrate TLS Protect for Kubernetes Discovery Capability
-- Explore and demonestrate Certificate Issuance and Discovery capabilities
+-  Explore and demonestrate TLS Protect for Kubernetes Discovery Capability [here](#tlspk-discovery)
+- Explore and demonestrate Certificate Issuance and Discovery capabilities [here](#certificate-issuance-and-discovery)
 
 
-## TLSPK Discovery
+## (A) TLSPK Discovery
 ###  Goals
 
 The repo walks you through some steps to explore the capaiblities of TLSPK 
@@ -24,17 +24,13 @@ The following are the prerequistes you need to be able to go through this worksh
 This workshop assumed the use of GitHub codespace. 
 This guide is providing good guidance to run the same set up on your own workstation as well, macOS, Linux or Windows
 
+### Steps
+
+- [Kick off GitHub Codecodes instance](docs/README0.md)
+- [Onboard a Kubernetes Cluster for Discovery](docs/README5.md)
 
 
-
-
-
-
-
-
-
-
-## Certificate Issuance and Discovery
+## (B) Certificate Issuance and Discovery
 ###  Goals
 The repo walks you through some steps to explore the capaiblities of TLS PK 
 
