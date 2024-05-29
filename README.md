@@ -2,8 +2,8 @@
 
 This Playground provides guidance for two scenarios 
 
--  Explore and demonestrate TLS Protect for Kubernetes Discovery Capability [here](#tlspk-discovery)
-- Explore and demonestrate Certificate Issuance and Discovery capabilities [here](#certificate-issuance-and-discovery)
+-  Explore and demonestrate TLS Protect for Kubernetes Discovery Capability [(A)](#tlspk-discovery)
+- Explore and demonestrate Certificate Issuance and Discovery capabilities [(B)](#certificate-issuance-and-discovery)
 
 
 ## (A) TLSPK Discovery
