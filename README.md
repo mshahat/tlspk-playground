@@ -1,13 +1,48 @@
 # Venafi TLS Protect for Kubernetes Playground
 
-## Goals
+This Playground provides guidance for two scenarios 
+
+- Explore and demonestrate TLS Protect for Kubernetes Discovery Capability
+- Explore and demonestrate Certificate Issuance and Discovery capabilities
+
+
+## TLSPK Discovery
+###  Goals
+
+The repo walks you through some steps to explore the capaiblities of TLSPK 
+
+- Onboard Kubernetes cluster to VaaS for Discovery
+
+### Prerequisites
+
+The following are the prerequistes you need to be able to go through this workshop
+
+- GitHub account
+- Access to a VaaS tenant. You can create a [new tenant here](https://venafi.com/try-venafi/)
+- Chrome Browser recommended. Other Browsers should work
+
+This workshop assumed the use of GitHub codespace. 
+This guide is providing good guidance to run the same set up on your own workstation as well, macOS, Linux or Windows
+
+
+
+
+
+
+
+
+
+
+
+## Certificate Issuance and Discovery
+###  Goals
 The repo walks you through some steps to explore the capaiblities of TLS PK 
 
 - Deploy Venafi Enhanced Issuer amongst other components
 - Issue certificates using a CA of choice
 - Onboard Kubernetes cluster to VaaS for Discovery
 
-## Prerequisites
+### Prerequisites
 
 The following are the prerequistes you need to be able to go through this workshop
 
@@ -19,7 +54,7 @@ This workshop assumed the use of GitHub codespace.
 This guide is providing good guidance to run the same set up on your own workstation as well, macOS, Linux or Windows
 
 
-## Steps
+### Steps
 
 - [Kick off GitHub Codecodes instance](docs/README0.md)
 - [Configure Venafi Control Plane](docs/README1.md)
