@@ -1,6 +1,6 @@
 # Venafi TLS Protect for Kubernetes Playground
 
-This Playground provides guidance for two scenarios 
+This Playground provides guidance for two scenarios
 
 -  Explore and demonestrate TLS Protect for Kubernetes Discovery Capability [(A)](#tlspk-discovery)
 - Explore and demonestrate Certificate Issuance and Discovery capabilities [(B)](#certificate-issuance-and-discovery)
