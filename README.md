@@ -9,7 +9,7 @@ This Playground provides guidance for two scenarios
 ## (A) TLSPK Discovery
 ###  Goals
 
-The repo walks you through some steps to explore the capaiblities of TLSPK 
+The repo walks you through some steps to explore the capaiblities of TLSPK  
 
 - Onboard Kubernetes cluster to VaaS for Discovery
 
