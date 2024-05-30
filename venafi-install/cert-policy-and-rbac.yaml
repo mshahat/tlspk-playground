@@ -32,7 +32,7 @@ spec:
 #  plugins:
 #    venafi:
 #      values:
-#        venafiConnectionName: "venafi-*-connection" 
+#        venafiConnectionName: "venafi-*-connection"  
 #        zone: "application-name\\issuing-template-name"      
   selector:
     issuerRef:
