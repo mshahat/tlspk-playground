@@ -27,7 +27,7 @@ This guide is providing good guidance to run the same set up on your own worksta
 ### Steps
 
 - [Kick off GitHub Codecodes instance](docs/README0.md)
-- [Onboard a Kubernetes Cluster for Discovery](docs/README5.md)
+- [Onboard a Kubernetes Cluster for Discovery](docs/README6.md)
 
 
 ## (B) Certificate Issuance and Discovery
