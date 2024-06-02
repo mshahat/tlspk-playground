@@ -61,6 +61,9 @@ go install github.com/derailed/k9s@latest
 k9s --headless
 ```
 
+> [!NOTE]  
+> For Path (A) Discovery only Go back to [Onboard a Kubernetes Cluster for Discovery ](README6.md#onboard-a-kubernetes-cluster-for-discovery)
+
 ## Create kubernetes pull secret
 
 Remember the service account you created in the previous stage. This is when you use it to create a pull secret resource in kubernetes in `venafi` namespace
