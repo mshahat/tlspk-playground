@@ -60,6 +60,12 @@ This guide is providing good guidance to run the same set up on your own worksta
 - [Onboard a Kubernetes Cluster for Discovery](docs/README5.md)
 
 
+# Credits
+
+This work has been built on the shoulders of others
+
+https://github.com/Venafi/kubernetes-demos
+https://github.com/amcginlay/tlspk-helper
 
 
 [Main Menu](README.md) | Next [Configure Venafi Control Plane](docs/README1.md)
