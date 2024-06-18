@@ -1,8 +1,17 @@
-# Issue Certificates in Kubernetes
+# (Optional) Create certificate examples of common mistakes
+
+This is an optional step creating some sample certificates that highlight common mistakes.
+```
+wget https://raw.githubusercontent.com/mshahat/tlspk-playground/main/venafi-install/sample-certificates/gen_democerts.sh
+chmod +x gen_democerts.sh
+./gen_democerts.sh 3 5 7 6 5 12 2 1 2 5 4
+```
+
+# Issue Certificates in Kubernetes (the right way)
 
 Now every thing ready to issue certificates in kuberntes using the cluster issuer created earlier
 
-## Sample Certificate
+## Sample Certificate via cert-manager
 
 At this stage you will issue a certificate using the builtin ca that comes with Venafi Control Plane. This is configured by the issuing pokicy used
 
