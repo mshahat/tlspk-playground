@@ -10,7 +10,7 @@
 #!/bin/bash
 
 # Remove previous certs
-rm /temp_certs/*
+rm temp_certs/*
 
 # Function to generate the root CA
 generate_root_ca() {
